@@ -1,0 +1,72 @@
+// Source mirrored into both publication modules in this static export.
+async function copyCitationText(text) {
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return true;
+    }
+  } catch (_) {
+    // A browser or embedded preview may deny the Clipboard API.
+  }
+  const previousFocus = document.activeElement;
+  const field = document.createElement("textarea");
+  field.value = text;
+  field.readOnly = true;
+  field.style.cssText = "position:fixed;top:0;left:0;opacity:0;pointer-events:none";
+  document.body.appendChild(field);
+  try {
+    field.focus({ preventScroll: true });
+    field.select();
+    field.setSelectionRange(0, text.length);
+    return document.execCommand("copy");
+  } catch (_) {
+    return false;
+  } finally {
+    field.remove();
+    if (previousFocus && previousFocus.focus) previousFocus.focus({ preventScroll: true });
+  }
+}
+
+function CitationCopyButton({ text, label }) {
+  const [status, setStatus] = REACT.useState("idle");
+  REACT.useEffect(() => {
+    if (status === "idle" || status === "copying") return;
+    const timer = setTimeout(() => setStatus("idle"), 4000);
+    return () => clearTimeout(timer);
+  }, [status]);
+  const chinese = document.documentElement.lang.startsWith("zh");
+  const message = status === "copied"
+    ? (chinese ? "已复制" : "Copied!")
+    : (chinese ? "请按 Ctrl/Cmd+C 复制选中内容" : "Press Ctrl/Cmd+C to copy the selected text");
+  return (0, r.jsxs)(r.Fragment, { children: [
+    (0, r.jsx)("button", {
+      type: "button",
+      className: "citation-copy-button absolute top-2 right-2 p-1.5 rounded-md shadow-sm border transition-colors",
+      title: label,
+      "aria-label": label,
+      disabled: status === "copying",
+      onClick: async (event) => {
+        const button = event.currentTarget;
+        setStatus("copying");
+        if (await copyCitationText(text)) {
+          setStatus("copied");
+        } else {
+          const pre = button.parentElement.querySelector("pre");
+          if (pre) {
+            const range = document.createRange();
+            range.selectNodeContents(pre);
+            const selection = window.getSelection();
+            if (selection) { selection.removeAllRanges(); selection.addRange(range); }
+          }
+          setStatus("manual");
+        }
+      },
+      children: (0, r.jsx)(COPY_ICON, { className: "h-4 w-4" })
+    }),
+    status !== "idle" && status !== "copying" && (0, r.jsx)("span", {
+      className: "citation-copy-feedback",
+      role: "status",
+      children: message
+    })
+  ] });
+}

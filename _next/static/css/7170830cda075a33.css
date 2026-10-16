@@ -219,3 +219,34 @@ footer .text-xs { color: var(--muted); }
 /* Keep both header controls legible in every theme and locale. */
 nav button[title] { background: var(--surface-soft); color: var(--primary); border-color: var(--border); }
 nav button[title]:hover { color: var(--accent); border-color: var(--accent); }
+
+/* Shared Abstract / BibTeX panels on the home and Publications pages.
+   Neutral text tokens are light in dark mode, so do not use them as surfaces. */
+main .overflow-hidden:is(.mt-3, .mt-4) > .rounded-lg.border {
+  background: var(--surface-soft);
+  border-color: var(--border);
+  color: var(--neutral-600);
+}
+main .overflow-hidden:is(.mt-3, .mt-4) > .rounded-lg.border > :is(p, pre) {
+  color: inherit;
+}
+main .overflow-hidden:is(.mt-3, .mt-4) > .rounded-lg.border > pre {
+  padding-right: 2rem;
+}
+main .overflow-hidden:is(.mt-3, .mt-4) > .rounded-lg.border > button {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--neutral-600);
+}
+main .overflow-hidden:is(.mt-3, .mt-4) > .rounded-lg.border > button:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.citation-copy-feedback {
+  display: block;
+  margin-top: .75rem;
+  color: var(--accent);
+  font-size: .75rem;
+  line-height: 1.5;
+}
+.citation-copy-button:disabled { cursor: wait; opacity: .65; }
