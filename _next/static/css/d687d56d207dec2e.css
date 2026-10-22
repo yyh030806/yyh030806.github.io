@@ -118,22 +118,6 @@ main > .max-w-6xl { background: transparent; padding-top: 48px; padding-bottom: 
   background: linear-gradient(90deg, var(--racing-teal) 0 63%, #3265d8 63%);
 }
 .profile-avatar img { object-position: center; }
-.racing-signature {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 11px;
-  margin-bottom: 24px;
-}
-.racing-number {
-  color: var(--racing-blue);
-  font: italic 800 32px/1 Arial, sans-serif;
-  letter-spacing: -2px;
-  padding-right: 12px;
-  border-right: 1px solid var(--border);
-}
-.racing-team { display: block; color: var(--accent); font-size: 10px; font-weight: 700; letter-spacing: .18em; }
-.racing-driver { display: block; color: var(--muted); font-size: 11px; letter-spacing: .025em; margin-top: 2px; }
 .profile-panel h1 { font-size: 29px; }
 .profile-panel > .bg-neutral-100 {
   background: var(--surface-soft);
