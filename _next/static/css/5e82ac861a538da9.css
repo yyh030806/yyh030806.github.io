@@ -234,3 +234,8 @@ main .overflow-hidden:is(.mt-3, .mt-4) > .rounded-lg.border > button:hover {
   line-height: 1.5;
 }
 .citation-copy-button:disabled { cursor: wait; opacity: .65; }
+
+/* Keep the publication heading intact; move its link below on narrow screens. */
+.publication-heading { flex-wrap: wrap; gap: .5rem 1rem; }
+.publication-heading > h2 { flex-shrink: 0; white-space: nowrap; }
+.publication-heading > a { margin-left: auto; white-space: nowrap; }

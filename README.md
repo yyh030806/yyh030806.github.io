@@ -9,7 +9,7 @@ Both light and dark modes use the same palette. The
 profile image is `头像.png`.
 
 This repository is a prebuilt Next.js static export. Theme overrides are at
-the end of `_next/static/css/d687d56d207dec2e.css`. Profile markup is mirrored
+the end of `_next/static/css/5e82ac861a538da9.css`. Profile markup is mirrored
 in `index.html` and the homepage JavaScript chunk; profile data also appears
 in `index.txt`. Keep these in sync when editing the export, and update asset
 filenames and their references when changing cached CSS or JavaScript.
