@@ -16,7 +16,7 @@ research tags, the active navigation underline, and the avatar stripe. Blue is
 `#1B5CCB` in light mode and `#77A7FF` for readable details in dark mode.
 
 This repository is a prebuilt Next.js static export. Theme overrides are at
-the end of `_next/static/css/29d2a43f289250f1.css`. Profile markup is mirrored
+the end of `_next/static/css/70cf8835117d01a6.css`. Profile markup is mirrored
 in `index.html` and the homepage JavaScript chunk; profile data also appears
 in `index.txt`. Keep these in sync when editing the export, and update asset
 filenames and their references when changing cached CSS or JavaScript.
