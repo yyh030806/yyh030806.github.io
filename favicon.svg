@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32">
   <rect width="100" height="100" rx="22" fill="#101010"/>
-  <path d="M22 81h36l8-5H25z" fill="#00f5d2"/>
-  <path d="M61 81h17l-3-5H69z" fill="#00f5d2"/>
+  <path d="M22 81h36l8-5H25z" fill="#00d2be"/>
+  <path d="M61 81h17l-3-5H69z" fill="#00d2be"/>
   <text x="50%" y="48%" dominant-baseline="central" text-anchor="middle" font-family="Arial, sans-serif" font-size="62" font-weight="700" fill="#f5f5f5">Y</text>
 </svg>

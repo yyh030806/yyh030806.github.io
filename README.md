@@ -5,12 +5,12 @@
 ## Theme
 
 Mercedes-inspired neutral silver and graphite with teal accents (palette A).
-Light mode uses white and silver surfaces with dark teal links; dark mode uses
-neutral black and grey surfaces with bright teal accents. The
+Both modes use the same bright teal (`#00D2BE`) for links, hover states and
+decorative accents, with neutral white/silver or black/grey surfaces. The
 profile image is `antonelli-helmet.png` (Kimi Antonelli helmet).
 
 This repository is a prebuilt Next.js static export. Theme overrides are at
-the end of `_next/static/css/ac0dd3ad75c272eb.css`. Profile markup is mirrored
+the end of `_next/static/css/e9fb59efd9503eec.css`. Profile markup is mirrored
 in `index.html` and the homepage JavaScript chunk; profile data also appears
 in `index.txt`. Keep these in sync when editing the export, and update asset
 filenames and their references when changing cached CSS or JavaScript.

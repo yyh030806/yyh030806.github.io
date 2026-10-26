@@ -266,9 +266,8 @@ nav [data-nav-href].text-primary {background:var(--surface-soft);box-shadow:none
 .profile-panel > .bg-neutral-100 {border-left-width:2px;background:var(--surface-soft)}
 #about > section > .space-y-3 > div > span {color:var(--muted)}
 main .inline-flex.rounded-md {color:var(--primary);background:transparent}
-main .inline-flex.rounded-md:hover {color:var(--background);background:var(--accent)}
+main .inline-flex.rounded-md:hover {color:#101010;background:var(--accent)}
 main .rounded-lg.border:has(h3),main .rounded-xl.border:has(h3) {box-shadow:none;border-radius:10px}
-:root,.light{--accent:#00766B;--accent-light:#00877B;--accent-dark:#005C53;--racing-teal:#00F5D2;--racing-blue:#00766B}
-.dark{--accent:#00F5D2;--accent-light:#66FFE9;--accent-dark:#65EBD9;--racing-blue:#00F5D2}
+:root,.light,.dark{--accent:#00D2BE;--accent-light:#00D2BE;--accent-dark:#00D2BE;--racing-teal:#00D2BE;--racing-blue:#00D2BE}
 .profile-avatar::after{background:var(--racing-teal);height:2px}
 #about h2::before,main .max-w-3xl h2::before{background:var(--racing-teal);height:17px;flex-basis:2px}
