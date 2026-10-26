@@ -341,20 +341,8 @@ main .flex.flex-wrap > .inline-flex.rounded-md:focus-visible {
   outline-offset: 2px;
 }
 
-/* Bright teal underlines keep light-mode paragraphs calm and easy to read. */
-:root:not(.dark) #about p a {
-  color: var(--foreground);
-  background: transparent;
-  box-shadow: none;
-  text-decoration-line: underline;
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-:root:not(.dark) #about p a:hover {
-  color: var(--primary);
-  text-decoration-thickness: 2px;
-}
+/* Paragraph links keep the same bright teal in both modes. */
+#about p a, #about p a:hover { color: var(--accent); text-decoration: none; }
 @media (hover: none) and (pointer: coarse) {
   main .flex.flex-wrap > .inline-flex.rounded-md { min-height: 40px; }
 }
