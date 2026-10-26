@@ -346,3 +346,22 @@ main .flex.flex-wrap > .inline-flex.rounded-md:focus-visible {
 @media (hover: none) and (pointer: coarse) {
   main .flex.flex-wrap > .inline-flex.rounded-md { min-height: 40px; }
 }
+
+/* Small blue accents inspired by the supplied Antonelli cap reference. */
+:root, .light {
+  --antonelli-blue: #1B5CCB;
+  --antonelli-blue-soft: #1b5ccb0f;
+}
+.dark {
+  --antonelli-blue: #77A7FF;
+  --antonelli-blue-soft: #77a7ff14;
+}
+nav [data-nav-href].text-primary { border-bottom-color: var(--antonelli-blue); }
+.profile-avatar::after {
+  background: linear-gradient(90deg, var(--racing-teal) 0 75%, #1B5CCB 75%);
+}
+#about > section > .space-y-3 > div > span { color: var(--antonelli-blue); }
+.profile-panel > .bg-neutral-100 .space-y-2 > div {
+  color: var(--antonelli-blue);
+  background: var(--antonelli-blue-soft);
+}
