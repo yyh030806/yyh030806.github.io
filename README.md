@@ -6,7 +6,7 @@
 
 Mercedes-inspired silver, graphite and teal, with blue accents.
 Both light and dark modes use the same palette. The
-profile image is `头像.png`.
+profile image is `antonelli-helmet.png` (Kimi Antonelli helmet).
 
 This repository is a prebuilt Next.js static export. Theme overrides are at
 the end of `_next/static/css/5e82ac861a538da9.css`. Profile markup is mirrored
