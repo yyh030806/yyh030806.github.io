@@ -12,11 +12,12 @@ Research interests use compact tags below a divider. Publication controls have
 transparent borders and subtle hover/selected backgrounds. Paragraph links
 use bright teal text without underlines in both modes.
 Small blue accents inspired by the Antonelli cap reference highlight news dates,
-research tags, the active navigation underline, and the avatar stripe. Blue is
+research tags, section markers, and the avatar stripe. Navigation selection
+keeps the same bright teal as links. Blue is
 `#1B5CCB` in light mode and `#77A7FF` for readable details in dark mode.
 
 This repository is a prebuilt Next.js static export. Theme overrides are at
-the end of `_next/static/css/70cf8835117d01a6.css`. Profile markup is mirrored
+the end of `_next/static/css/844648a0feaa1485.css`. Profile markup is mirrored
 in `index.html` and the homepage JavaScript chunk; profile data also appears
 in `index.txt`. Keep these in sync when editing the export, and update asset
 filenames and their references when changing cached CSS or JavaScript.

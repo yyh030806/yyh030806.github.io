@@ -356,7 +356,7 @@ main .flex.flex-wrap > .inline-flex.rounded-md:focus-visible {
   --antonelli-blue: #77A7FF;
   --antonelli-blue-soft: #77a7ff14;
 }
-nav [data-nav-href].text-primary { border-bottom-color: var(--antonelli-blue); }
+nav [data-nav-href].text-primary { border-bottom-color: var(--accent); }
 .profile-avatar::after {
   background: linear-gradient(90deg, var(--racing-teal) 0 75%, #1B5CCB 75%);
 }
