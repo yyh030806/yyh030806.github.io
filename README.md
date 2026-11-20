@@ -16,8 +16,15 @@ research tags, section markers, and the avatar stripe. Navigation selection
 keeps the same bright teal as links. Blue is
 `#1B5CCB` in light mode and `#77A7FF` for readable details in dark mode.
 
+Inter is self-hosted from `fonts/` (no Google Fonts, so it loads reliably in
+China). The header and footer share the content width, news dates sit in an aligned
+column, and publication preview images are shown at a readable size.
+Small motion details sit in the last stylesheet block: an avatar zoom on
+hover, drawn-in section markers, sliding link underlines and an accent edge on
+hovered publication cards. All motion is off under `prefers-reduced-motion`.
+
 This repository is a prebuilt Next.js static export. Theme overrides are at
-the end of `_next/static/css/844648a0feaa1485.css`. Profile markup is mirrored
+the end of `_next/static/css/9caff21a0b8f683d.css`. Profile markup is mirrored
 in `index.html` and the homepage JavaScript chunk; profile data also appears
 in `index.txt`. Keep these in sync when editing the export, and update asset
 filenames and their references when changing cached CSS or JavaScript.
